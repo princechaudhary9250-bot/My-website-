@@ -1,35 +1,374 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>मेरी वेबसाइट</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prince Chaudhary | Personal Website</title>
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(11, 16, 32, 0.95);
+            padding: 15px 20px;
             text-align: center;
-            background: #f2f2f2;
-            padding: 50px;
+            border-bottom: 1px solid #26304d;
         }
 
-        h1 {
-            color: #222;
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 14px;
         }
 
-        p {
+        nav a:hover {
+            color: #61dafb;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #111a38, #182b52, #101528);
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .profile {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid #61dafb;
+            background: #202a44;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 45px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #61dafb;
+        }
+
+        .hero p {
+            color: #c8d0e0;
             font-size: 18px;
+            margin-bottom: 25px;
         }
 
-        button {
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 6px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #07101c;
+            background: #61dafb;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 1px solid #61dafb;
+        }
+
+        /* Sections */
+        section {
+            padding: 70px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 35px;
+            color: #61dafb;
+        }
+
+        .about {
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+            color: #d5d9e3;
+            font-size: 17px;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #151d34;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #293553;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #61dafb;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            color: white;
+        }
+
+        .card p {
+            color: #b8c0d0;
+            font-size: 14px;
+        }
+
+        .icon {
+            font-size: 35px;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #c4cada;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #070b16;
+            color: #9da6ba;
+            font-size: 14px;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 12px 5px;
+            }
+
+            nav a {
+                font-size: 12px;
+                margin: 0 4px;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .profile {
+                width: 110px;
+                height: 110px;
+                font-size: 38px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 18px;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>नमस्ते! 👋</h1>
-    <p>यह मेरी पहली वेबसाइट है।</p>
-    <button>Click Me</button>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <!-- Home -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+
+            <div class="profile">
+                👤
+            </div>
+
+            <h1>Hello, I'm <span>Prince Chaudhary</span></h1>
+
+            <p>
+                Welcome to my personal website.
+                This is my little space on the internet.
+            </p>
+
+            <a href="#about" class="btn">Explore More</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about">
+            <p>
+                Hello! My name is <strong>Prince Chaudhary</strong>.
+                Welcome to my personal website.
+                I am interested in learning new things, developing
+                my skills and creating something useful with technology.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2 class="section-title">My Interests</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Technology</h3>
+                <p>
+                    Learning about computers, websites and modern technology.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📚</div>
+                <h3>Learning</h3>
+                <p>
+                    Always trying to learn something new and improve my knowledge.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🚀</div>
+                <h3>My Goals</h3>
+                <p>
+                    Building skills and working towards my future goals.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+    <section id="education">
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🎓</div>
+                <h3>Student</h3>
+                <p>
+                    Currently focusing on education and personal development.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📖</div>
+                <h3>Learning</h3>
+                <p>
+                    Exploring new subjects, technology and useful skills.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact">
+
+            <p>
+                Want to connect with me?
+            </p>
+
+            <a href="#" class="btn">Instagram</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Prince Chaudhary. All Rights Reserved.</p>
+
+    </footer>
+
 </body>
 </html>
