@@ -1,374 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Prince Chaudhary | Personal Website</title>
+<title>Prince Chaudhary | Personal Website</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #0b1020;
-            color: white;
-            line-height: 1.6;
-        }
+body{
+  font-family:Arial,sans-serif;
+  background:#081020;
+  color:white;
+  line-height:1.6;
+}
 
-        /* Navigation */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(11, 16, 32, 0.95);
-            padding: 15px 20px;
-            text-align: center;
-            border-bottom: 1px solid #26304d;
-        }
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#050b18;
+  padding:15px 10px;
+  text-align:center;
+  border-bottom:1px solid #263b62;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 8px;
-            font-size: 14px;
-        }
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
+  font-size:15px;
+}
 
-        nav a:hover {
-            color: #61dafb;
-        }
+nav a:hover{
+  color:#52d9ff;
+}
 
-        /* Hero */
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #111a38, #182b52, #101528);
-        }
+section{
+  padding:75px 18px;
+  max-width:1000px;
+  margin:auto;
+}
 
-        .hero-content {
-            max-width: 700px;
-        }
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:linear-gradient(135deg,#111f42,#162e5a,#07101f);
+}
 
-        .profile {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            border: 4px solid #61dafb;
-            background: #202a44;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 45px;
-        }
+.hero h1{
+  font-size:48px;
+  margin-bottom:15px;
+}
 
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
+.hero h1 span{
+  color:#52d9ff;
+}
 
-        .hero h1 span {
-            color: #61dafb;
-        }
+.hero p{
+  font-size:20px;
+  color:#c7d0e3;
+  max-width:650px;
+  margin:auto;
+}
 
-        .hero p {
-            color: #c8d0e0;
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:13px 25px;
+  border-radius:30px;
+  background:#52d9ff;
+  color:#06101f;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            margin: 6px;
-            border-radius: 30px;
-            text-decoration: none;
-            color: #07101c;
-            background: #61dafb;
-            font-weight: bold;
-        }
+.title{
+  text-align:center;
+  color:#52d9ff;
+  font-size:34px;
+  margin-bottom:35px;
+}
 
-        .btn:hover {
-            opacity: 0.85;
-        }
+.card-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
 
-        .btn-outline {
-            background: transparent;
-            color: white;
-            border: 1px solid #61dafb;
-        }
+.card{
+  background:#121d36;
+  border:1px solid #263d66;
+  border-radius:15px;
+  padding:25px;
+  text-align:center;
+}
 
-        /* Sections */
-        section {
-            padding: 70px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+.card h3{
+  color:#52d9ff;
+  margin-bottom:10px;
+}
 
-        .section-title {
-            text-align: center;
-            font-size: 30px;
-            margin-bottom: 35px;
-            color: #61dafb;
-        }
+.card p{
+  color:#c4ccdc;
+}
 
-        .about {
-            text-align: center;
-            max-width: 750px;
-            margin: auto;
-            color: #d5d9e3;
-            font-size: 17px;
-        }
+.about-box{
+  background:#121d36;
+  border-radius:15px;
+  padding:30px;
+  border:1px solid #263d66;
+  text-align:center;
+}
 
-        /* Cards */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
+.goal{
+  text-align:center;
+  background:linear-gradient(135deg,#10244b,#0c172c);
+  border-radius:18px;
+  padding:40px 20px;
+}
 
-        .card {
-            background: #151d34;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid #293553;
-            transition: 0.3s;
-        }
+.goal h3{
+  font-size:30px;
+  color:#52d9ff;
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: #61dafb;
-        }
+footer{
+  text-align:center;
+  padding:25px;
+  background:#050b18;
+  color:#9da8bb;
+}
 
-        .card h3 {
-            margin: 10px 0;
-            color: white;
-        }
+@media(max-width:600px){
+  .hero h1{
+    font-size:36px;
+  }
 
-        .card p {
-            color: #b8c0d0;
-            font-size: 14px;
-        }
+  nav a{
+    margin:0 5px;
+    font-size:13px;
+  }
 
-        .icon {
-            font-size: 35px;
-        }
-
-        /* Contact */
-        .contact {
-            text-align: center;
-        }
-
-        .contact p {
-            color: #c4cada;
-            margin-bottom: 20px;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #070b16;
-            color: #9da6ba;
-            font-size: 14px;
-        }
-
-        /* Mobile */
-        @media (max-width: 700px) {
-
-            nav {
-                padding: 12px 5px;
-            }
-
-            nav a {
-                font-size: 12px;
-                margin: 0 4px;
-            }
-
-            .hero {
-                min-height: 80vh;
-            }
-
-            .hero h1 {
-                font-size: 34px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .profile {
-                width: 110px;
-                height: 110px;
-                font-size: 38px;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 55px 18px;
-            }
-
-            .section-title {
-                font-size: 27px;
-            }
-        }
-    </style>
+  .hero p{
+    font-size:17px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#education">Education</a>
+  <a href="#goals">Goals</a>
+  <a href="#contact">Contact</a>
+</nav>
 
+<section id="home" class="hero">
+  <div>
+    <h1>Hello, I'm <span>Prince Chaudhary</span></h1>
+    <p>Class 11th Student • Technology Learner • Future IAS Aspirant</p>
+    <a href="#about" class="btn">Explore My Journey</a>
+  </div>
+</section>
 
-    <!-- Home -->
-    <section class="hero" id="home">
-        <div class="hero-content">
+<section id="about">
+  <h2 class="title">About Me</h2>
 
-            <div class="profile">
-                👤
-            </div>
+  <div class="about-box">
+    <p>
+      Hello! I'm Prince Chaudhary, a Class 11th student.
+      I enjoy learning about technology, exploring new ideas
+      and discovering useful things that can help me grow.
+      I believe that learning something new every day can
+      create a better future.
+    </p>
+  </div>
+</section>
 
-            <h1>Hello, I'm <span>Prince Chaudhary</span></h1>
+<section id="skills">
+  <h2 class="title">My Skills</h2>
 
-            <p>
-                Welcome to my personal website.
-                This is my little space on the internet.
-            </p>
+  <div class="card-container">
 
-            <a href="#about" class="btn">Explore More</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
+    <div class="card">
+      <h3>💡 Creative Thinking</h3>
+      <p>Finding new ideas and different ways to solve problems.</p>
+    </div>
 
-        </div>
-    </section>
+    <div class="card">
+      <h3>🤖 AI & Technology</h3>
+      <p>Exploring artificial intelligence and modern technology.</p>
+    </div>
 
+    <div class="card">
+      <h3>🌐 Web Design</h3>
+      <p>Learning how websites are created and published online.</p>
+    </div>
 
-    <!-- About -->
-    <section id="about">
+    <div class="card">
+      <h3>📚 Fast Learning</h3>
+      <p>Interested in learning new subjects, tools and useful skills.</p>
+    </div>
 
-        <h2 class="section-title">About Me</h2>
+  </div>
+</section>
 
-        <div class="about">
-            <p>
-                Hello! My name is <strong>Prince Chaudhary</strong>.
-                Welcome to my personal website.
-                I am interested in learning new things, developing
-                my skills and creating something useful with technology.
-            </p>
-        </div>
+<section id="education">
+  <h2 class="title">Education</h2>
 
-    </section>
+  <div class="card-container">
 
+    <div class="card">
+      <h3>🎓 Class 11th</h3>
+      <p>Currently continuing my higher secondary education.</p>
+    </div>
 
-    <!-- Skills -->
-    <section id="skills">
+    <div class="card">
+      <h3>🏫 School</h3>
+      <p>Adity Narayan Rajkiy Inter College, Chakiya, Chandauli</p>
+    </div>
 
-        <h2 class="section-title">My Interests</h2>
+  </div>
+</section>
 
-        <div class="cards">
+<section id="goals">
+  <h2 class="title">My Future Goal</h2>
 
-            <div class="card">
-                <div class="icon">💻</div>
-                <h3>Technology</h3>
-                <p>
-                    Learning about computers, websites and modern technology.
-                </p>
-            </div>
+  <div class="goal">
+    <h3>🇮🇳 IAS</h3>
+    <p>
+      My future goal is to prepare for the Civil Services
+      and work towards becoming an IAS officer.
+    </p>
+  </div>
+</section>
 
-            <div class="card">
-                <div class="icon">📚</div>
-                <h3>Learning</h3>
-                <p>
-                    Always trying to learn something new and improve my knowledge.
-                </p>
-            </div>
+<section id="contact">
+  <h2 class="title">Contact</h2>
 
-            <div class="card">
-                <div class="icon">🚀</div>
-                <h3>My Goals</h3>
-                <p>
-                    Building skills and working towards my future goals.
-                </p>
-            </div>
+  <div class="about-box">
+    <p>
+      Thanks for visiting my personal website.
+    </p>
 
-        </div>
+    <a href="#home" class="btn">Back to Home</a>
+  </div>
+</section>
 
-    </section>
-
-
-    <!-- Education -->
-    <section id="education">
-
-        <h2 class="section-title">Education</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <div class="icon">🎓</div>
-                <h3>Student</h3>
-                <p>
-                    Currently focusing on education and personal development.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="icon">📖</div>
-                <h3>Learning</h3>
-                <p>
-                    Exploring new subjects, technology and useful skills.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact">
-
-        <h2 class="section-title">Contact Me</h2>
-
-        <div class="contact">
-
-            <p>
-                Want to connect with me?
-            </p>
-
-            <a href="#" class="btn">Instagram</a>
-
-        </div>
-
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <p>© 2026 Prince Chaudhary. All Rights Reserved.</p>
-
-    </footer>
+<footer>
+  © 2026 Prince Chaudhary • Personal Website
+</footer>
 
 </body>
-</html>
+    </html>
